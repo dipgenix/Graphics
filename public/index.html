@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purifiora Sales & Marketing Assistant</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <p class="badge">AI ENABLED</p>
+        <h1>Purifiora Sales & Marketing Assistant</h1>
+        <p>
+          Build campaign briefs, outbound messaging, and sales copy in seconds.
+          Add your business context and let AI generate a practical strategy.
+        </p>
+      </header>
+
+      <main class="grid">
+        <section class="card">
+          <h2>Campaign Input</h2>
+          <form id="assistant-form">
+            <label>
+              Primary goal
+              <input name="goal" placeholder="e.g., Increase qualified demo bookings" required />
+            </label>
+
+            <label>
+              Target audience
+              <input name="audience" placeholder="e.g., Mid-size ecommerce operators" required />
+            </label>
+
+            <label>
+              Product / service
+              <input name="product" placeholder="e.g., Purifiora Growth Suite" required />
+            </label>
+
+            <label>
+              Primary channel
+              <select name="channel" required>
+                <option value="">Select a channel</option>
+                <option>Email Outreach</option>
+                <option>LinkedIn</option>
+                <option>Paid Social</option>
+                <option>Landing Page</option>
+                <option>Webinar Funnel</option>
+              </select>
+            </label>
+
+            <label>
+              Brand tone
+              <select name="tone">
+                <option>Professional</option>
+                <option>Consultative</option>
+                <option>Bold</option>
+                <option>Friendly</option>
+                <option>Data-driven</option>
+              </select>
+            </label>
+
+            <label>
+              Extra context (optional)
+              <textarea
+                name="extraContext"
+                rows="4"
+                placeholder="e.g., ICP, current conversion rates, competitor insights"
+              ></textarea>
+            </label>
+
+            <button type="submit" id="generate-btn">Generate Assistant Plan</button>
+          </form>
+        </section>
+
+        <section class="card output-card">
+          <div class="output-header">
+            <h2>Assistant Output</h2>
+            <span id="model-tag">Model: waiting...</span>
+          </div>
+          <div id="status" class="status">Fill in the form and generate your plan.</div>
+          <article id="result" class="result" aria-live="polite"></article>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+:root {
+  color-scheme: dark;
+  --bg: #0b1220;
+  --bg-soft: #121c30;
+  --card: #17233d;
+  --primary: #57b8ff;
+  --primary-2: #7ce7d7;
+  --text: #e8f1ff;
+  --muted: #b6c5de;
+  --border: #25385f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(circle at 20% 0%, #1d2e4f, var(--bg) 45%);
+  color: var(--text);
+}
+
+.app-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.hero {
+  margin-bottom: 1.4rem;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  background: linear-gradient(120deg, var(--primary), var(--primary-2));
+  color: #071322;
+  font-weight: 700;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+}
+
+.hero h1 {
+  margin: 0.65rem 0 0.5rem;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.hero p {
+  margin: 0;
+  max-width: 720px;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+  background: linear-gradient(160deg, #172845 0%, var(--card) 100%);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #3a4f7b;
+  padding: 0.65rem 0.75rem;
+  background: #111c33;
+  color: var(--text);
+}
+
+button {
+  margin-top: 0.4rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(120deg, var(--primary), #4f9cfd);
+  color: #061122;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.output-card {
+  min-height: 500px;
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+#model-tag {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.status {
+  border: 1px dashed #49638f;
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-bottom: 0.8rem;
+  color: #cde0ff;
+}
+
+.result {
+  max-height: 560px;
+  overflow-y: auto;
+  line-height: 1.5;
+  color: #eaf3ff;
+}
+
+.result h3,
+.result h4 {
+  color: #9fd3ff;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .output-card {
+    min-height: auto;
+  }
+}

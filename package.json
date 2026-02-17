@@ -1,0 +1,19 @@
+{
+  "name": "purifiora-sales-marketing-assistant",
+  "version": "1.0.0",
+  "description": "Web app for Purifiora Sales & Marketing Assistant with AI integration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "lint": "node --check server.js"
+  },
+  "keywords": [
+    "sales",
+    "marketing",
+    "assistant",
+    "ai"
+  ],
+  "author": "",
+  "license": "MIT"
+}
